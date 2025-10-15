@@ -40,10 +40,10 @@ def modify_menu_item(db,cursor):
 def view_menu_items(cursor):
     cursor.execute("SELECT * FROM menu_items")
     rows = cursor.fetchall()
-    print("\n--- MENU ---")
+    print("\n----- MENU -----")
     for r in rows:
         print(f"{r['id']}. {r['name']} ({r['category']}) - ₹{r['price']}")
-    print("------------")
+    print("-------------------")
 
 def view_orders(cursor):
     cursor.execute("SELECT * FROM orders ORDER BY created_at DESC")

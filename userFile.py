@@ -16,7 +16,7 @@ def user_cart_process(user,db,cursor):
     cart = {}
     while True:
         rows = user_view_menu(cursor)
-        choice = input("Enter item ID to add (or 'done'): ")
+        choice = input("Enter item ID to add: ")
         if choice.lower() == 'done':
             break
         qty = int(input("Enter quantity: "))
